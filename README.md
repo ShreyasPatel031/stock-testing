@@ -16,7 +16,8 @@ US Stock Market data was taken from https://simfin.com/ for five years and for 2
   <img src= "Images/Screen2.gif" >
 </p>
 
-2.**Missing values**: A 8 fold cross validation split was taken for the data and hence it is necessary to make sure that each split had data available for all feature. After removal of the above steps there were 1022 stocks that the algorithm was run on.
+2. **Missing values**: A 8 fold cross validation split was taken for the data and hence it is necessary to make sure that each split had data available for all feature. After removal of the above steps there were 1022 stocks that the algorithm was run on.
+
 3. **Stationarity and Normalization**: The testing feature ( Return on stock ) is already differenced and was found to be stationary with the data mostly centered around zero. Differencing the other feature resulted in the features becoming extremely small in which case multi step forecasting in the model causes the predicted values to diverge and become extremely large in some cases.
 
 # Testing
@@ -29,3 +30,6 @@ the multivariate time series Vector Autoregression Model ( VAR ) was taken, howe
 
 # Scoring
 The scoring was based on the root mean squared error ( rmse ) metric and the estimated profit for the portfolio. The profit was calculated assuming the weights assigned to each stock is on the basis of projected profit and the stocks have perfect short and long conditions.
+<p align="center"> 
+  <img src= "Images/Scores.png" width = "100%">
+</p>
