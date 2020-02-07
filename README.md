@@ -27,6 +27,9 @@ US Stock Market data was taken from https://simfin.com/ for five years and for 2
 </p>
 Time Series Cross validation as opposed to conventional k fold cross validation takes the continuity of data into consideration. An 8 split cross validation was taken with each split , however the rolling window values were only assumed to be valid 6 months after the start time and the last 6 months were not taken for testing due to lack of test data. This in effect the data is trained and tested 6 times.</br>
 the multivariate time series Vector Autoregression Model ( VAR ) was taken, however any multivariate or univariate model can be tested on the data. The hyperparameter maxlags was set to 2. As most stocks consistenly performed wel at the given value there was no need for a nested cross validation approach where the possible parameter grid is tested on the validation set and the best hyperparameter is taken for testing.
+<p align="center">
+  <img src= "Images/Fit.gif" >
+</p>
 
 # Scoring
 The scoring was based on the root mean squared error ( rmse ) metric and the estimated profit for the portfolio. The profit was calculated assuming the weights assigned to each stock is on the basis of projected profit and the stocks have perfect short and long conditions.
